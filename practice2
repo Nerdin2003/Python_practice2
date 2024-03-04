@@ -1,0 +1,96 @@
+import math
+#1
+a = 5
+b = 10
+
+#2
+a == 3 + 2 and 4 + 1 
+b == 9 + 1 and 15 - 5
+a == b + 5 and b + 2
+b == a + b and b + a
+
+#3
+a == 4 + 1 or 1 + 1
+b == 2 + 2 or 11 - 1
+a == b - 1 or a + 1 
+b == a + b or 2 - 1
+
+#4
+name = "Serhiy"
+skill = "dying"
+name == a or "Serhiy" #true
+skill == name and "dying" #false
+
+#5
+c = 12
+d = -2
+if c > 0:
+    print ("Too much butter!")
+if d < 0:
+    print ("what are you dooooooooing?")
+
+#6
+if c > 0:
+    print ("1")
+else:
+    print ("-1")
+
+#7
+cat = 5
+dog = 2
+
+if cat > dog: 
+    rat = cat - dog 
+else:
+    if cat < dog: 
+        rat = cat + dog
+    else: rat = cat
+
+#8
+year = 2018
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print ("Високосний рік")
+else:
+    print ("Не високосний рік")
+
+#9.a
+fib1 = 0
+fib2 = 1
+n = 20
+i = 3
+while i < n:
+ fib_sum = fib1 + fib2
+ print (fib_sum)
+ fib1 = fib2
+ fib2 = fib_sum
+ i = i + 1
+
+#9.b
+a = 0
+while a <= 20:
+    print(a, end=" ")
+    a += 2
+
+b = -1
+while b >= -21:
+    print(b, end=" ")
+    b -= 3
+
+#10
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+sequence = [2, 3, 5, 6, 7, 11, 13, 17, 19, 21, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61]
+
+prime_count = 0
+
+for num in sequence:
+    if is_prime(num):
+        prime_count += 1
+
+print("Кількість простих чисел:", prime_count)
